@@ -25,8 +25,10 @@
           </mat-form-field>
         </mat-card-content>
         <button type="submit" mat-stroked-button color="primary" class="btn-block" [disabled]="username.invalid || password.invalid">Log in</button>
+        <mat-error *ngIf="incorrectDetails">Incorrect username/password</mat-error>
       </form>
       <br>
+      <hr>
       <mat-card-subtitle>New here? <a routerLink="/register">Sign Up</a></mat-card-subtitle>
     </mat-card>
   </div>

@@ -13,6 +13,7 @@ export class LoginComponent {
   username = new FormControl('', [Validators.required]);
   password = new FormControl('', [Validators.required])
   
+  incorrectDetails = false
   hide = true
   
   constructor(private LoginService: LoginService) {
@@ -28,6 +29,9 @@ export class LoginComponent {
   }
 
   onSubmit(): void{
-    this.LoginService.PostLoginData(this.username.value, this.password.value)
+    let message:string = this.LoginService.PostLoginData(this.username.value, this.password.value)
+    if(message === "400"){
+      this.incorrectDetails = true
+    }
   }
 }
