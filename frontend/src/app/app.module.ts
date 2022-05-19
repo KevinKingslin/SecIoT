@@ -12,13 +12,15 @@ import { FrontpageComponent } from './frontpage/frontpage.component';
 
 import { AngularMaterialModule } from './angular-material.module';
 import { RegisterComponent } from './register/register.component';
+import { ResultComponent } from './result/result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    FrontpageComponent
+    FrontpageComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,
