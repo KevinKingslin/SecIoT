@@ -20,6 +20,8 @@ export class LoginService {
       headers: headers
     }).subscribe((res) => {
       console.log(res)
+      var data = JSON.parse(JSON.stringify(res));
+      localStorage.setItem('user_token', data.token);
       this.router.navigate(['/index'])
       return "200"
     },
