@@ -11,19 +11,22 @@ import { Router } from '@angular/router';
 export class LoginService {
   constructor(private HttpClient: HttpClient, private router: Router) { }
 
-  PostLoginData(username: string, password: string){
+  PostLoginData(username: string, password: string): string {
 
     const headers = new HttpHeaders()
           .set('Content-Type', 'application/json');
 
-    this.HttpClient.post('http://localhost:8000/login', { username, password }, {
+    this.HttpClient.post('http://localhost:8001/login', { username, password }, {
       headers: headers
     }).subscribe((res) => {
       console.log(res)
       this.router.navigate(['/index'])
+      return "200"
     },
     (err) => {
       console.log(err)
+      return "400"
     })
+    return "200"
   }
 }

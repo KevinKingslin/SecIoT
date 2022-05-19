@@ -16,7 +16,7 @@ export class RegisterService {
     const headers = new HttpHeaders()
           .set('Content-Type', 'application/json');
 
-    this.HttpClient.post('http://localhost:8000/register', { username, email, password }, {
+    this.HttpClient.post('http://localhost:8001/register', { username, email, password }, {
       headers: headers
     }).subscribe((res) => {
       this.router.navigate(['/index'])
