@@ -15,6 +15,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     transform: translate(-50%, -50%);
 }
 
+.content {
+	margin: 0;
+    position: absolute;
+    top: 12%;
+    left: 18%;
+}
+
 .main-div{
   height: 100vh;
   display: flex;
