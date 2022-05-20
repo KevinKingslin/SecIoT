@@ -13,6 +13,8 @@ import { FrontpageComponent } from './frontpage/frontpage.component';
 import { AngularMaterialModule } from './angular-material.module';
 import { RegisterComponent } from './register/register.component';
 import { ResultComponent } from './result/result.component';
+import { NmapformComponent } from './frontpage/nmapform/nmapform.component';
+import { MetasploitformComponent } from './frontpage/metasploitform/metasploitform.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ResultComponent } from './result/result.component';
     LoginComponent,
     RegisterComponent,
     FrontpageComponent,
-    ResultComponent
+    ResultComponent,
+    NmapformComponent,
+    MetasploitformComponent
   ],
   imports: [
     BrowserModule,

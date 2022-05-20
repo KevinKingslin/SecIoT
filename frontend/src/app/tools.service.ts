@@ -10,7 +10,7 @@ export class ToolsService {
   constructor(private HttpClient: HttpClient, private router: Router) {}
 
   
-  Nmap(choice: number, ip: string, ports: string){
+  Nmap(choice: string, ip: string, ports: string){
     const user_token = localStorage.getItem('user_token')
     const headers = new HttpHeaders().set('Authorization', `Bearer ${user_token}`);
 
@@ -18,6 +18,9 @@ export class ToolsService {
       headers: headers
     }).subscribe((res) => {
       console.log(res)
+      var data = JSON.parse(JSON.stringify(res));
+      localStorage.setItem('result', data.output);
+      this.router.navigate(['/result'])
     },
     (err) => {
       console.log(err)
@@ -32,6 +35,9 @@ export class ToolsService {
       headers: headers
     }).subscribe((res) => {
       console.log(res)
+      var data = JSON.parse(JSON.stringify(res));
+      localStorage.setItem('result', data.output);
+      this.router.navigate(['/result'])
     },
     (err) => {
       console.log(err)
@@ -46,6 +52,9 @@ export class ToolsService {
       headers: headers
     }).subscribe((res) => {
       console.log(res)
+      var data = JSON.parse(JSON.stringify(res));
+      localStorage.setItem('result', data.output);
+      this.router.navigate(['/result'])
     },
     (err) => {
       console.log(err)

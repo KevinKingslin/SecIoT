@@ -12,6 +12,13 @@
                 Analyze App
             <input id="file-input" type="file"style="visibility: hidden; position: absolute;"></label>
         </button>
-        <button class="frontpage-button" mat-raised-button color="primary">Scan IoT Network</button>
+        <button class="frontpage-button" mat-raised-button color="primary" [matMenuTriggerFor]="menu">Scan IoT Network</button>
+        <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="OpenForm = 'nmap'">Port Scanning</button>
+        <button mat-menu-item (click)="OpenForm = 'openvas'">Vulnerability Assessment</button>
+        <button mat-menu-item (click)="OpenForm = 'metasploit'">Exploitation</button>
+        </mat-menu>
+        <app-nmapform *ngIf="OpenForm === 'nmap'"></app-nmapform>
+        <app-metasploitform *ngIf="OpenForm === 'metasploit'"></app-metasploitform>
     </div>
 </div>

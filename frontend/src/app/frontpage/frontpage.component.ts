@@ -6,10 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./frontpage.component.css']
 })
 export class FrontpageComponent implements OnInit {
-
+  OpenForm:string = ""
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
