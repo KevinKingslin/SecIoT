@@ -1,0 +1,21 @@
+<form class="example-form" (ngSubmit)="onSubmit()">
+    <mat-card-content>
+    <mat-form-field class="example-full-width">
+        <input matInput [formControl]="ip" placeholder="IP" required>
+        <mat-error *ngIf="ip.invalid">You must enter a value</mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput [formControl]="port" placeholder="Port" required>
+        <mat-error *ngIf="port.invalid">You must enter a value</mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput [formControl]="exname" placeholder="Exname" required>
+        <mat-error *ngIf="exname.invalid">You must enter a value</mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput [formControl]="spayload" placeholder="Spayload" required>
+        <mat-error *ngIf="spayload.invalid">You must enter a value</mat-error>
+    </mat-form-field>
+    </mat-card-content>
+    <button type="submit" [disabled]="ip.invalid || port.invalid || exname.invalid || spayload.invalid" mat-stroked-button color="primary" class="btn-block">Submit</button>
+</form>
