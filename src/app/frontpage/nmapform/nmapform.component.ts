@@ -10,7 +10,7 @@ import { ToolsService } from 'src/app/tools.service';
 export class NmapformComponent implements OnInit {
   choice = new FormControl('', [Validators.required])
   ip = new FormControl('', [Validators.required])
-  ports = new FormControl('', [Validators.required])
+  ports = new FormControl('')
   constructor(private ToolsService: ToolsService) { }
 
   ngOnInit(): void {

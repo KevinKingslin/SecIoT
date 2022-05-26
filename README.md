@@ -1,15 +1,27 @@
-#SecIot Web App
-A integrated web application for doing security analysis on IOT devices
-##Technology used :
+# Frontend
 
-- Angular for frontend
-- Nodejs for backend
-- Dadris and Mongodb for database
-  ##Installation and Setup:
-- clone the project from the repository
-- To run the backend server
-  > goto the project directory
-  > `Run npm install`
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
-###Note:
-Please add a .env file to the same directory as .env.example replicating the template of the .env.example file before executing the server side application. You are free to change the string content of the .env.example file but remember to keep the variable name same
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
