@@ -10,5 +10,13 @@ export class FrontpageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    function hideloader() {
+      const loading = window.document.getElementById("loading");
+      if (loading === null) {
+        alert('oops');
+      } else {
+        loading.style.display= "none"!
+      }
+    }
   }
 }

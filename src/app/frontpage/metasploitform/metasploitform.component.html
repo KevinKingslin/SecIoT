@@ -18,11 +18,10 @@
                 <mat-error *ngIf="exname.invalid">You must enter a value</mat-error>
             </mat-form-field>
             <mat-form-field class="example-full-width">
-                <input matInput [formControl]="spayload" placeholder="Send payload" required>
-                <mat-error *ngIf="spayload.invalid">You must enter a value</mat-error>
+                <input matInput [formControl]="spayload" placeholder="Send payload (optional)">
             </mat-form-field>
             </mat-card-content>
-            <button type="submit" [disabled]="ip.invalid || port.invalid || exname.invalid || spayload.invalid" mat-stroked-button color="primary" class="btn-block">Submit</button>
+            <button type="submit" [disabled]="ip.invalid || port.invalid || exname.invalid" mat-stroked-button color="primary" class="btn-block">Submit</button>
         </mat-card>
     </div>
 </form>

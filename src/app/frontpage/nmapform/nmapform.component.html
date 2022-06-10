@@ -5,12 +5,14 @@
                 <mat-card-title>Port Scanning</mat-card-title>
               </mat-card-header>
             <mat-card-content>
+                <mat-radio-group aria-label="Select an option" [formControl]="choice" aria-required="">
+                    <mat-radio-button value="1" style="margin-right: 20px;">Basic IP Scan</mat-radio-button>
+                    <mat-radio-button value="2" style="margin: 20px;">Specific Port Scan</mat-radio-button>
+                    <mat-radio-button value="3" style="margin-bottom: 15px">Aggresive Scan</mat-radio-button>
+                    <mat-error *ngIf="choice.invalid">You must select an option</mat-error>
+                </mat-radio-group>
                 <mat-form-field class="example-full-width">
-                    <input matInput [formControl]="choice" placeholder="Choice" required>
-                    <mat-error *ngIf="choice.invalid">You must enter a value</mat-error>
-                </mat-form-field>
-                <mat-form-field class="example-full-width">
-                    <input matInput [formControl]="ip" placeholder="IP" required>
+                    <input matInput [formControl]="ip" placeholder="IP">
                     <mat-error *ngIf="ip.invalid">You must enter a value</mat-error>
                 </mat-form-field>
                 <mat-form-field class="example-full-width">

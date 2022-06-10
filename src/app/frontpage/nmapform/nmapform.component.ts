@@ -9,7 +9,7 @@ import { ToolsService } from 'src/app/tools.service';
 })
 export class NmapformComponent implements OnInit {
   choice = new FormControl('', [Validators.required])
-  ip = new FormControl('', [Validators.required])
+  ip = new FormControl('')
   ports = new FormControl('')
   constructor(private ToolsService: ToolsService) { }
 
@@ -17,6 +17,7 @@ export class NmapformComponent implements OnInit {
   }
 
   onSubmit(){
+    localStorage.setItem('option', "nmap");
     this.ToolsService.Nmap(this.choice.value, this.ip.value, this.ports.value)
   }
 }

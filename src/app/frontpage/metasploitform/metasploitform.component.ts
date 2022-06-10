@@ -11,13 +11,14 @@ export class MetasploitformComponent implements OnInit {
   ip = new FormControl('', [Validators.required])
   port = new FormControl('', [Validators.required])
   exname = new FormControl('', [Validators.required])
-  spayload = new FormControl('', [Validators.required])
+  spayload = new FormControl('')
   constructor(private ToolsService: ToolsService) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(){
+    localStorage.setItem('option', "metasploit");
     this.ToolsService.MetaSploit(this.ip.value, this.port.value, this.exname.value, this.spayload.value)
   }
 }

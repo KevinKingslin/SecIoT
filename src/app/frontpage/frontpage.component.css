@@ -7,6 +7,14 @@
     width: 100vw;
     height: 100vh;
     position: relative;
+    background-image: url("../../assets/background.png");
+	background-repeat: no-repeat; 
+	background-size: cover;
+}
+
+.frontpage-button{
+    width: 225px !important;
+    font-size:20px !important;
 }
 
 .frontpage-button {
