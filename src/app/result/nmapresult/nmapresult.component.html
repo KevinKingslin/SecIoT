@@ -1,0 +1,60 @@
+<!-- <mat-toolbar color="warn" class="app-header">
+    
+    <span class="nav-tool-items">
+      <a mat-button routerLink="/login" routerLinkActive="active"></a>
+      <a mat-button mat-raised-button routerLink="/login" routerLinkActive="active">Log out</a>
+    </span>
+</mat-toolbar> -->
+<div class="sidenav">
+  <a routerLink="/index"><img id="logo" src="/assets/logo.png" alt="image"></a>
+  <a class="h4 mt-3 ml-4">Analysis Report</a>
+  <a class="h6 mt-3 ml-5">Information</a>
+  <a class="h6 mt-3 ml-5">Scan Report</a>
+</div>
+<div class="content">
+  <h1 id="analysis-report">Information</h1>
+  <hr>
+  <dl class="row">
+    <dt class="col-sm-3 h4">IP</dt>
+    <dd class="col-sm-9 h4 lead">{{port}}</dd>
+
+    <dt class="col-sm-3 h4">Host Information</dt>
+    <dd class="col-sm-9 h4 lead">{{host}}</dd>
+  
+    <dt class="col-sm-3 h4">Host Latency</dt>
+    <dd class="col-sm-9 h4 lead">{{latency}}</dd>
+
+    <dt class="col-sm-3 h4">Time Taken To Scan</dt>
+    <dd class="col-sm-9 h4 lead">{{time}}</dd>
+  </dl>
+
+  <h1 id="analysis-report">Scan Report</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">{{table[0]}}</th>
+        <th scope="col">{{table[1]}}</th>
+        <th scope="col">{{table[2]}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">{{table[3]}}{{table[4]}}</th>
+        <td>{{table[5]}}</td>
+        <td>{{table[6]}}</td>
+      </tr>
+      <tr>
+        <th scope="row">{{table[7]}}{{table[8]}}</th>
+        <td>{{table[9]}}</td>
+        <td>{{table[10]}}</td>
+      </tr>
+      <tr>
+        <th scope="row">{{table[11]}}{{table[12]}}</th>
+        <td>{{table[13]}}</td>
+        <td>{{table[14]}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+</div>
