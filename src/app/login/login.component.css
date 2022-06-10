@@ -4,9 +4,9 @@
 
 #login {
     margin: 0;
-    background-image: url("background.png");
-    background-size: cover;
-    background-repeat: no-repeat;   
+    background-image: url("../../assets/background.png");
+	background-repeat: no-repeat; 
+	background-size: cover; 
     padding: 0;
     width: 100vw;
     height: 100vh;

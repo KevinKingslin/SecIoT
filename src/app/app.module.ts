@@ -13,8 +13,16 @@ import { FrontpageComponent } from './frontpage/frontpage.component';
 import { AngularMaterialModule } from './angular-material.module';
 import { RegisterComponent } from './register/register.component';
 import { ResultComponent } from './result/result.component';
+import { NmapresultComponent } from './result/nmapresult/nmapresult.component';
+import { OpenvasresultComponent } from './result/openvasresult/openvasresult.component';
+import { SpikeresultComponent } from './result/spikeresult/spikeresult.component';
+import { MetasploitresultComponent } from './result/metasploitresult/metasploitresult.component';
 import { NmapformComponent } from './frontpage/nmapform/nmapform.component';
+import { SpikeformComponent } from './frontpage/spikeform/spikeform.component';
 import { MetasploitformComponent } from './frontpage/metasploitform/metasploitform.component';
+import { OpenvasformComponent } from './frontpage/openvasform/openvasform.component';
+
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +31,15 @@ import { MetasploitformComponent } from './frontpage/metasploitform/metasploitfo
     RegisterComponent,
     FrontpageComponent,
     ResultComponent,
+    NmapresultComponent,
+    OpenvasresultComponent,
+    SpikeresultComponent,
+    MetasploitresultComponent,
     NmapformComponent,
-    MetasploitformComponent
+    MetasploitformComponent,
+    SpikeformComponent,
+    OpenvasformComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,

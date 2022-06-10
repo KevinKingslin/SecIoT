@@ -45,6 +45,6 @@ export class RegisterComponent {
   }
 
   onSubmit(): void{
-    this.RegisterService.PostRegisterData(this.username.value, this.email.value,this.password.value)
+    let result = this.RegisterService.PostRegisterData(this.username.value, this.email.value,this.password.value)
   }
 }

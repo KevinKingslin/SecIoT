@@ -30,6 +30,7 @@ export class LoginComponent {
 
   onSubmit(): void{
     let message:string = this.LoginService.PostLoginData(this.username.value, this.password.value)
+    console.log(message)
     if(message === "400"){
       this.incorrectDetails = true
     }

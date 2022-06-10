@@ -15,13 +15,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     transform: translate(-50%, -50%);
 }
 
-.content {
-	margin: 0;
-    position: absolute;
-    top: 12%;
-    left: 18%;
-}
-
 .main-div{
   height: 100vh;
   display: flex;
@@ -39,6 +32,7 @@ body {
 body {
 	min-height: 100vh;
 	background-color: #e5e5e5;
+	/* background-image: linear-gradient(to right, rgb(67, 67, 161) , rgb(76, 211, 200)); */
 	font-family: 'Roboto', sans-serif;
 }
 

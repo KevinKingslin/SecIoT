@@ -23,6 +23,7 @@ export class RegisterService {
     },
     (err) => {
       console.log(err)
+      return err
     })
   }
 }

@@ -9,12 +9,26 @@ import { Router } from '@angular/router';
 export class ToolsService {
   constructor(private HttpClient: HttpClient, private router: Router) {}
 
-  
   Nmap(choice: string, ip: string, ports: string){
     const user_token = localStorage.getItem('user_token')
     const headers = new HttpHeaders().set('Authorization', `Bearer ${user_token}`);
+    this.HttpClient.post('http://localhost:8001/user/nmap', { choice, ip}, {
+      headers: headers
+    }).subscribe((res) => {
+      console.log(res)
+      var data = JSON.parse(JSON.stringify(res));
+      localStorage.setItem('result', data.output);
+      this.router.navigate(['/result'])
+    },
+    (err) => {
+      console.log(err)
+    })
+  } 
 
-    this.HttpClient.post('http://localhost:8001/user/nmap', { choice, ip, ports }, {
+  OpenVas(choice: string, ip: string, ports: string){
+    const user_token = localStorage.getItem('user_token')
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${user_token}`);
+    this.HttpClient.post('http://localhost:8001/user/openvas', { choice, ip}, {
       headers: headers
     }).subscribe((res) => {
       console.log(res)
@@ -59,5 +73,5 @@ export class ToolsService {
     (err) => {
       console.log(err)
     })
-  } 
+  }
 }
